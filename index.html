@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Story Tale Documentation</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+  <![endif]-->
+
+  <script src="story-tale/jquery.js"></script>
+  <link href="story-tale/animate.css" rel="stylesheet" type="text/css">
+  <script src="story-tale/story-tale.js"></script>
+</head>
+
+<body data-spy="scroll" data-target="#menuSpyScroll">
+
+  <div id="home" class="jumbotron">
+    <div class="row">
+      <div class="col-md-10 col-sm-offset-1">
+        <h1 class="text-center text-primary">Story Tale Documentation</h1>
+        <h2 class="text-success text-center">Make your website a step by step experience.</h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <h2>Step Zero - Including the Library </h2>
+
+      <pre style='color:#000020;background:#f6f8ff;'>
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>script src="story-tale/jquery.js"</span><span style='color:#0057a6; '>></span><span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>script</span><span style='color:#0057a6; '>></span>
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>link</span><span style='color:#474796; '> </span><span style='color:#074726; '>href</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"story-tale/animate.css"</span><span style='color:#474796; '> </span><span style='color:#074726; '>rel</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"stylesheet"</span><span style='color:#474796; '> </span><span style='color:#074726; '>type</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"text/css"</span><span style='color:#0057a6; '>></span>
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>script src="story-tale/story-tale.min.js"</span><span style='color:#0057a6; '>></span><span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>script</span><span style='color:#0057a6; '>></span>
+      </pre>
+
+      <h2>Step One - Getting Familiar</h2>
+      <p>You start by setting a "Panel Zone", a Panel Zone is a container which has a story to be said.</p>
+      <p>A panel zone is added by adding the following attribute to a HTML Element <span class="label label-primary">data-story-tale</span></p>
+      <p>That attribute informs the application, assigning default effects for the elements inside that Panel for example data-story-tale="rotateIn,rotateInDownLeft,rotateInDownRight,rotateInUpLeft,rotateInUpRight"</p>
+      <h2>Step Two - What you need to know</h2>
+      <p>Now, inside the defined panel, you have two options, add text stories, or content block ( any HTML attribute ).</p>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th style="width:30%;">Name</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="width:30%;">data-story-tale-item</td>
+            <td>This is used for marking a text zone, this is used for <span class="text-danger">Stricly TEXT Only</span>, to achieve an awesome Text Story Display </td>
+          </tr>
+          <tr>
+            <td style="width:30%;">data-story-tale-item-group</td>
+            <td>This is used for marking a text zone which may go to a newline, easily preventing words from splitting from a line to another, this is used for <span class="text-danger">Stricly TEXT Only</span>, to achieve an awesome Text Story Display </td>
+          </tr>
+          <tr>
+            <td style="width:30%;">data-story-tale-container</td>
+            <td>This is used for marking a block zone. This can be used anywhere.</td>
+          </tr>
+        </tbody>
+      </table>
+      <h2>Optional Additional Params</h2>
+      <table class="table table-bordered">
+        <thead>
+        <tr>
+          <th style="width:30%;">Name</th>
+          <th>Description</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td style="width:30%;">data-story-tale-quick</td>
+          <td>Add this param also with one of the others, to display the next item right away.</td>
+        </tr>
+        </tbody>
+      </table>
+      <h2>Step Three</h2>
+      <p>Adding one of the two possible attributes, data-story-tale-item, data-story-tale-container.</p>
+      <p>For example, if I want to have assign story tale to the following structure</p>
+
+      <div class="clearfix"></div>
+
+      <pre style='color:#000020;background:#f6f8ff;'>
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>
+          <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>p</span><span style='color:#0057a6; '>></span>Have you ever saw the Easy Development Logo ?<span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>p</span><span style='color:#0057a6; '>></span>
+          <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>p</span><span style='color:#0057a6; '>></span>You can see it now !<span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>p</span><span style='color:#0057a6; '>></span>
+          <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>img</span><span style='color:#474796; '> </span><span style='color:#074726; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"http://2.s3.envato.com/files/64998712/80x80.png"</span><span style='color:#0057a6; '>/></span>
+        <span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>
+      </pre>
+
+      <br/>
+
+      <p>After Adding Story Tale it would look like this</p>
+
+      <pre style='color:#000020;background:#f6f8ff;'>
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#474796; '> </span><span style='color:#074726; '>data</span><span style='color:#474796; '>-story-tale</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"rotateInDownLeft, rotateInDownRight"</span><span style='color:#0057a6; '>></span>
+           <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>p</span><span style='color:#474796; '> </span><span style='color:#074726; '>data</span><span style='color:#474796; '>-story-tale-item</span><span style='color:#0057a6; '>></span>Have you ever saw the Easy Development Logo ?<span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>p</span><span style='color:#0057a6; '>></span>
+           <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>p</span><span style='color:#474796; '> </span><span style='color:#074726; '>data</span><span style='color:#474796; '>-story-tale-item</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"fadeInUp"</span><span style='color:#0057a6; '>></span>You can see it now ! ( not using default effect here )<span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>p</span><span style='color:#0057a6; '>></span>
+           <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>img</span><span style='color:#474796; '> </span><span style='color:#074726; '>data</span><span style='color:#474796; '>-story-tale-container</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"fadeInLeftBig"</span><span style='color:#474796; '> </span><span style='color:#074726; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"http://2.s3.envato.com/files/64998712/80x80.png"</span><span style='color:#0057a6; '>/></span>
+        <span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>
+      </pre>
+    </div>
+  </div>
+
+  <hr/>
+
+  <h2 class="text-center">Preview</h2>
+
+  <br/>
+
+  <div class="container">
+    <div data-story-tale="rotateInDownLeft, rotateInDownRight">
+      <p data-story-tale-item>Have you ever saw the Easy Development Logo ?</p>
+      <p data-story-tale-item="fadeInUp">You can see it now ! ( not using default effect here )</p>
+      <p data-story-tale-item-group>
+        This is a preview of story tale item group. It has the scope to keep all the words on the same line. Go Features !
+      </p>
+      <img data-story-tale-container="fadeInLeftBig" src="http://2.s3.envato.com/files/64998712/80x80.png"/>
+    </div>
+  </div>
+
+
+  <div class="clearfix"></div>
+
+  <br/><br/>
+  <footer>
+    <div class="well">
+      <div class="container">
+        @ Easy Development
+      </div>
+    </div>
+  </footer>
+
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
